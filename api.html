@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>航盛聚合数据-天气预报服务</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="./assets/css/mainv2.css" rel="stylesheet" type="text/css">
+<script src="./assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/js/layer/layer.js" type="text/javascript" charset="utf-8"></script> 
+
+
+<script src="./assets/js/json.parse.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/regPublic.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/regAnimation.js" type="text/javascript" charset="utf-8"></script> 
+
+<script type="text/javascript" src="./assets/js/syntaxhighlighte/scripts/shCore.js"></script>
+<script type="text/javascript" src="./assets/js/syntaxhighlighte/scripts/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet" href="./assets/js/syntaxhighlighte/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="./assets/js/syntaxhighlighte/styles/shThemeDefault.css"/>
+
+
+
+
+
+</head>
+
+<body>
+<div id="top">
+	<div class="wid">
+		<div id="logo"><a href="index.html">航盛聚合数据</a></div>
+        <div id="logocenter">
+          <div id="nav">
+          <ul>
+			<li><a href="" class="on">API</a></li>
+		  </ul>
+          </div>
+        </div>
+		<div id="logoright">
+          <div id="searchbox">
+          <form action="">
+            <input id="keyword" type="text" name="keyword" placeholder="请输入API名称，如：天气" value=""><input type="submit" id="searchbtn" value="搜索">
+          </form>
+          </div> 
+         
+          
+          	<div id="logindiv">
+                        <div id="logininbox">
+              <a href="/my/" class="">jiangjinlei<i></i></a>              
+              <ul id="loginindown" style="display: none;">
+                <li><a href="user.html">会员中心</a></li>
+                <li><a href="login.html">注销</a></li>
+              </ul>
+            </div>            
+                        </div>
+                        
+                        			  						  			
+		</div>
+		<div class="clear"></div>
+	</div> 
+</div>
+
+<div class="wid" id="apilbox">
+ 
+  <div id="apileft">
+    <h2>API大全</h2>
+    <ul>
+      <li><a href="" id="iclass1">生活常用 <span>0</span></a></li>
+      <li><a href="" id="iclass3">天气服务 <span>4</span></a></li>
+      <li><a href="" id="iclass2">交通出行 <span>0</span></a></li>
+      <li><a href="" id="iclass12">图像识别 <span>0</span></a></li>
+      <li><a href="" id="iclass9">充值缴费 <span>0</span></a></li>
+      <li><a href="" id="iclass10">位置服务 <span>0</span></a></li>
+      <li><a href="" id="iclass11">新闻媒体 <span>0</span></a></li>
+    </ul>
+  </div>
+  
+  <div id="apiright">
+
+	<div id="topcrumb" class="wid"><a href="index.html">首页</a> <span></span> <a href="index.html">天气服务</a> <span></span> 天气预报服务</div>
+  
+  
+  	<div id="apiileft">
+  	
+  	
+    <div id="apiinfo" style="border-top-color:#4fcee1">      
+      <div id="apiinfoleft">      
+        <img src="./assets/images/iqa2.png" alt="全国天气预报">
+      </div> 
+      <div id="apiinforight">
+        <div id="apiitop">
+        <h1>天气预报服务</h1>
+                               
+          <div class="clearfix"></div>
+        </div>
+                  <div id="apiiprice">
+                        
+                        <span class="isfree">免费</span>
+                                  </div>
+                  <div id="apiidesc">全国3000多个省市的天气预报查询，包括实时天气气温、最高最低温度、风级、风力、湿度、气压，穿衣、运动、洗车、感冒、空气污染扩散、紫外线等指数，7天天气、风力、最低最高温度、日出日落时间，未来24小时的时天气、气温，空气质量指数、PM2.5指数、主要污染物等信息。<br>
+天气图片地址：http://api.yzhsea.com/weather/icon.zip</div>
+          <div id="apinuminfo"><ul><li>申请数：<span id="aninum1">1915</span></li><li>使用数：<span id="aninum2">1406000</span></li></ul><div class="clearfix"></div></div>
+                    <div id="apiicollect">
+             <a href="javascript:applybtn();" rel="nofollow" id="applybtn" data_id="12">申请服务</a>
+             <div class="clearfix"></div>
+          </div>
+                </div>
+      <div class="clearfix"></div>
+    </div> 
+    
+    
+    
+    <div id="apicontent">
+     
+      <div id="apitab">
+        <ul><li><a href="javascript:;" class="on">API</a></li><li><a href="javascript:;" class="">错误码参照</a></li></ul>
+        <div class="clearfix"></div>
+      </div>
+      
+      <div id="apibox">
+       
+        <div id="apimain" style="display: block;">
+         
+          <div id="apibleft">
+            <ul>
+                            <li><a href="javascript:;" class="on">天气预报查询</a></li>
+                            <li><a href="javascript:;">获取城市</a></li>
+            </ul>
+          </div>
+          
+          <div id="apibright">
+                        <div class="subapiitem" style="display: block;">
+              <div class="subapiinfo">
+              <div class="apiline">
+                <label>接口地址：</label>
+                <span class="enword lightblue">http://api.yzhsae.com/weather/query</span>
+              </div>
+              <div class="apiline">
+                <label>支持格式：</label>
+                <span class="enword">JSON,JSONP</span>
+              </div>
+              <div class="apiline">
+                <label>请求方法：</label>
+                <span class="enword">GET POST</span>
+              </div>
+              <div class="apiline">
+                <label>请求示例：</label>
+                <span class="enword lightblue">http://api.yzhsae.com/weather/query?appkey=yourappkey&amp;city=安顺</span>
+              </div>
+              
+              
+              <div class="apilinebox">
+               
+                <div class="alh4line">
+                  <h4>请求参数：</h4>
+                  
+                </div>  
+                
+                                            
+                <table>				
+    			<tbody><tr><th class="col1">参数名称</th><th class="col2">类型</th><th class="col3">必填</th><th class="col4">说明</th></tr>
+                    			<tr>						
+    				<td class="param">city</td>
+                    <td class="param">string</td>
+    				<td>否</td>
+    				<td>城市</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">cityid</td>
+                    <td class="param">int</td>
+    				<td>否</td>
+    				<td>城市ID</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">citycode</td>
+                    <td class="param">string</td>
+    				<td>否</td>
+    				<td>城市天气代号</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">location</td>
+                    <td class="param">string</td>
+    				<td>否</td>
+    				<td>经纬度 纬度在前，,分割 如：39.983424,116.322987</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">ip</td>
+                    <td class="param">string</td>
+    				<td>否</td>
+    				<td>IP</td>
+    			</tr>
+                    			</tbody></table>
+              </div>
+              
+              
+              
+              
+              <div class="apilinebox">
+                <div class="alh4line">
+                  <h4>返回参数：</h4>                  
+                </div>                
+                <table>				
+    			<tbody><tr><th class="col1">参数名称</th><th class="col2">类型</th><th class="col5">说明</th></tr>
+                    			<tr>						
+    				<td class="param">city</td>
+                    <td class="param">string</td>    				
+    				<td>城市</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">cityid</td>
+                    <td class="param">int</td>    				
+    				<td>城市ID</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">citycode</td>
+                    <td class="param">string</td>    				
+    				<td>城市天气代号</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">date</td>
+                    <td class="param">string</td>    				
+    				<td>日期</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">week</td>
+                    <td class="param">string</td>    				
+    				<td>星期</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">weather</td>
+                    <td class="param">string</td>    				
+    				<td>天气</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">temp</td>
+                    <td class="param">string</td>    				
+    				<td>气温</td>
+    			</tr>
+                    			</tbody></table>
+              </div>
+              
+              
+              <div class="coderesponse">
+                <h4>JSON返回示例 :</h4>            
+                <div class="codeboxresponse">              
+                    
+					<pre class="brush: js" id="jsonTextBox">
+					{"code":"1","msg":"success","datas":{"createTime":"2015-11-0915:01:15","area":{
+								"areaId":"101190601",
+								"nameEn":"yangzhou",
+								"name":"扬州",
+								"city":"扬州",
+								"province":"江苏"
+							},
+							"indexes":[
+								{
+									"name":"舒适度指数",
+									"sn":"shu_shi_du",
+									"value":"舒适",
+									"desc":"白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。"
+								},
+								{
+									"name":"洗车指数",
+									"sn":"xi_che",
+									"value":"较适宜",
+									"desc":"较适宜洗车，未来一天无雨，风力较小，擦洗一新的汽车至少能保持一天。"
+								},
+								{
+									"name":"穿衣指数",
+									"sn":"chuan_yi",
+									"value":"较冷",
+									"desc":"建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。"
+								},
+								{
+									"name":"感冒指数",
+									"sn":"gao_mao",
+									"value":"较易发",
+									"desc":"天凉，昼夜温差较大，较易发生感冒，请适当增减衣服，体质较弱的朋友请注意适当防护。"
+								},
+								{
+									"name":"运动指数",
+									"sn":"yun_dong",
+									"value":"较适宜",
+									"desc":"天气较好，无雨水困扰，较适宜进行各种运动，但因天气凉，在户外运动请注意增减衣物。"
+								},
+								{
+									"name":"旅游指数",
+									"sn":"lv_you",
+									"value":"适宜",
+									"desc":"天气较好，但丝毫不会影响您出行的心情。温度适宜又有微风相伴，适宜旅游。"
+								},
+								{
+									"name":"紫外线指数",
+									"sn":"zi_wai_xian",
+									"value":"弱",
+									"desc":"紫外线强度较弱，建议出门前涂擦SPF在12-15之间、PA+的防晒护肤品。"
+								}
+							]
+						}
+					}
+					</pre>
+
+					<script type="text/javascript">
+			SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+			SyntaxHighlighter.all();
+			 var formatJson = function(json, options) {
+				var reg = null,
+				  formatted = '',
+				  pad = 0,
+				  PADDING = '    '; // one can also use '\t' or a different number of spaces
+				// optional settings
+				options = options || {};
+				// remove newline where '{' or '[' follows ':'
+				options.newlineAfterColonIfBeforeBraceOrBracket = (options.newlineAfterColonIfBeforeBraceOrBracket === true) ? true : false;
+				// use a space after a colon
+				options.spaceAfterColon = (options.spaceAfterColon === false) ? false : true;
+
+				// begin formatting...
+
+				// make sure we start with the JSON as a string
+				if (typeof json !== 'string') {
+					json = JSON.stringify(json);
+				}
+				// parse and stringify in order to remove extra whitespace
+				json = JSON.parse(json);
+				json = JSON.stringify(json);
+
+				// add newline before and after curly braces
+				reg = /([\{\}])/g;
+				json = json.replace(reg, '\r\n$1\r\n');
+
+				// add newline before and after square brackets
+				reg = /([\[\]])/g;
+				json = json.replace(reg, '\r\n$1\r\n');
+
+				// add newline after comma
+				reg = /(\,)/g;
+				json = json.replace(reg, '$1\r\n');
+
+				// remove multiple newlines
+				reg = /(\r\n\r\n)/g;
+				json = json.replace(reg, '\r\n');
+
+				// remove newlines before commas
+				reg = /\r\n\,/g;
+				json = json.replace(reg, ',');
+
+				// optional formatting...
+				if (!options.newlineAfterColonIfBeforeBraceOrBracket) {
+					reg = /\:\r\n\{/g;
+					json = json.replace(reg, ':{');
+					reg = /\:\r\n\[/g;
+					json = json.replace(reg, ':[');
+				}
+				if (options.spaceAfterColon) {
+					reg = /\:/g;
+					json = json.replace(reg, ': ');
+				}
+
+				$.each(json.split('\r\n'), function(index, node) {
+					var i = 0,
+					  indent = 0,
+					  padding = '';
+
+					if (node.match(/\{$/) || node.match(/\[$/)) {
+						indent = 1;
+					} else if (node.match(/\}/) || node.match(/\]/)) {
+						if (pad !== 0) {
+							pad -= 1;
+						}
+					} else {
+						indent = 0;
+					}
+
+					for (i = 0; i < pad; i++) {
+						padding += PADDING;
+					}
+
+					formatted += padding + node + '\r\n';
+					pad += indent;
+				});
+
+				return formatted;
+			};
+		var jsObj = $("#jsonTextBox").html();
+		$('#jsonTextBox').html( formatJson(jsObj) );
+
+
+
+
+
+
+		</script>
+               
+                </div>
+           	</div> 
+           
+             
+                 
+          </div>
+             </div> 
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             <div class="subapiitem" style="display: none;">
+              <div class="subapiinfo">
+              <div class="apiline">
+                <label>接口地址：</label>
+                <span class="enword lightblue">http://api.yzhsae.com/weather/city</span>
+              </div>
+              <div class="apiline">
+                <label>支持格式：</label>
+                <span class="enword">JSON,JSONP</span>
+              </div>
+              <div class="apiline">
+                <label>请求方法：</label>
+                <span class="enword">GET</span>
+              </div>
+              <div class="apiline">
+                <label>请求示例：</label>
+                <span class="enword lightblue">http://api.yzhsae.com/weather/city?appkey=yourappkey</span>
+              </div>
+              <div class="apilinebox">
+                <div class="alh4line">
+                  <h4>请求参数：</h4>
+                </div>                
+                <table>				
+    			<tbody><tr><th class="col1">参数名称</th><th class="col2">类型</th><th class="col3">必填</th><th class="col4">说明</th></tr>
+                    			</tbody></table>
+              </div>
+              <div class="apilinebox">
+                <div class="alh4line">
+                  <h4>返回参数：</h4>                  
+                </div>                
+                <table>				
+    			<tbody><tr><th class="col1">参数名称</th><th class="col2">类型</th><th class="col5">说明</th></tr>
+                    			<tr>						
+    				<td class="param">cityid</td>
+                    <td class="param">int</td>    				
+    				<td>城市ID</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">parentid</td>
+                    <td class="param">int</td>    				
+    				<td>上级ID</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">citycode</td>
+                    <td class="param">string</td>    				
+    				<td>城市天气代号</td>
+    			</tr>
+                    			<tr>						
+    				<td class="param">city</td>
+                    <td class="param">string</td>    				
+    				<td>城市</td>
+    			</tr>
+                    			</tbody></table>
+              </div>
+              </div>
+              
+              <div class="coderesponse">
+                <h4>JSON返回示例 :</h4>            
+                <div class="codeboxresponse">              
+                    <div><div id="highlighter_618946" class="syntaxhighlighter  js"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js plain">{</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"status"</code><code class="js plain">: </code><code class="js string">"0"</code><code class="js plain">,</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"msg"</code><code class="js plain">: </code><code class="js string">"ok"</code><code class="js plain">,</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"result"</code><code class="js plain">: [</code></div><div class="line number5 index4 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"cityid"</code><code class="js plain">: </code><code class="js string">"1"</code><code class="js plain">,</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"parentid"</code><code class="js plain">: </code><code class="js string">"0"</code><code class="js plain">,</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"citycode"</code><code class="js plain">: </code><code class="js string">"101010100"</code><code class="js plain">,</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"city"</code><code class="js plain">: </code><code class="js string">"北京"</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"cityid"</code><code class="js plain">: </code><code class="js string">"24"</code><code class="js plain">,</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"parentid"</code><code class="js plain">: </code><code class="js string">"0"</code><code class="js plain">,</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"citycode"</code><code class="js plain">: </code><code class="js string">"101020100"</code><code class="js plain">,</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"city"</code><code class="js plain">: </code><code class="js string">"上海"</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"cityid"</code><code class="js plain">: </code><code class="js string">"26"</code><code class="js plain">,</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"parentid"</code><code class="js plain">: </code><code class="js string">"0"</code><code class="js plain">,</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"citycode"</code><code class="js plain">: </code><code class="js string">"101030100"</code><code class="js plain">,</code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"city"</code><code class="js plain">: </code><code class="js string">"天津"</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"cityid"</code><code class="js plain">: </code><code class="js string">"31"</code><code class="js plain">,</code></div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"parentid"</code><code class="js plain">: </code><code class="js string">"0"</code><code class="js plain">,</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"citycode"</code><code class="js plain">: </code><code class="js string">"101040100"</code><code class="js plain">,</code></div><div class="line number27 index26 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"city"</code><code class="js plain">: </code><code class="js string">"重庆"</code></div><div class="line number28 index27 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number29 index28 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">{</code></div><div class="line number30 index29 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"cityid"</code><code class="js plain">: </code><code class="js string">"32"</code><code class="js plain">,</code></div><div class="line number31 index30 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"parentid"</code><code class="js plain">: </code><code class="js string">"0"</code><code class="js plain">,</code></div><div class="line number32 index31 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"citycode"</code><code class="js plain">: </code><code class="js string">"101320101"</code><code class="js plain">,</code></div><div class="line number33 index32 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js string">"city"</code><code class="js plain">: </code><code class="js string">"香港"</code></div><div class="line number34 index33 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number35 index34 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">]</code></div><div class="line number36 index35 alt1"><code class="js plain">}</code></div></div></td></tr></tbody></table></div></div>             
+                </div>
+              </div>
+            </div>
+             
+             <div class="clear"></div>     
+      </div>
+  		</div>
+  		
+  		
+  		<div id="apierror" style="display: none;">
+          <div class="apilinebox">
+            <h4>API错误码：</h4>
+            <table>				
+			<tbody><tr><th class="col6">代号</th><th class="col7">说明</th></tr>
+            			<tr>						
+				<td class="td-1">201</td>
+                <td class="td-2">城市和城市ID和城市代号都为空</td>				
+			</tr>
+            			<tr>						
+				<td class="td-1">202</td>
+                <td class="td-2">城市不存在</td>				
+			</tr>
+            			<tr>						
+				<td class="td-1">203</td>
+                <td class="td-2">此城市没有天气信息</td>				
+			</tr>
+            			<tr>						
+				<td class="td-1">210</td>
+                <td class="td-2">没有信息</td>				
+			</tr>
+            			</tbody></table>
+          </div>
+           <div class="apilinebox">
+            <h4>系统错误码：</h4>
+            <table>				
+			<tbody><tr><th class="col6">代号</th><th class="col7">说明</th></tr>
+						<tr>						
+				<td>101</td>
+                <td>APPKEY为空或不存在</td>				
+			</tr>
+            			<tr>						
+				<td>102</td>
+                <td>APPKEY已过期</td>				
+			</tr>
+            			<tr>						
+				<td>103</td>
+                <td>APPKEY无请求此数据权限</td>				
+			</tr>
+            			<tr>						
+				<td>104</td>
+                <td>请求超过次数限制</td>				
+			</tr>
+            			<tr>						
+				<td>105</td>
+                <td>IP被禁止</td>				
+			</tr>
+            			<tr>						
+				<td>106</td>
+                <td>IP请求超过限制</td>				
+			</tr>
+            			<tr>						
+				<td>107</td>
+                <td>接口维护中</td>				
+			</tr>
+            			<tr>						
+				<td>108</td>
+                <td>接口已停用</td>				
+			</tr>
+            			</tbody></table>
+          </div>
+        </div>
+  
+  
+  		
+        
+        
+  </div>
+  <div class="clear"></div>
+  </div> 
+  
+          </div>
+             </div>   </div>
+           <div class="clear"></div>
+<script type="text/javascript">
+$("#apitab a").on('click', function(){
+    $(this).parent().parent().find('a').removeClass('on');
+    $(this).addClass('on');
+    var index = $(this).parent().index();
+    $("#apibox").children('div').hide();
+    $("#apibox").children('div').eq(index).show();
+})
+
+$("#apibleft a").on('click', function(){
+    $(this).parent().parent().find('a').removeClass('on');
+    $(this).addClass('on');
+    var index = $(this).parent().index();    
+    $("#apibright").children('.subapiitem').hide();
+    $("#apibright").children('.subapiitem').eq(index).show();
+})
+
+</script>
+
+                                                          
+<script type="text/javascript">
+$("#logininbox>a").hover(function(){ 
+    $('#loginindown').show();
+}, function(){    
+    $('#loginindown').hide();
+});
+
+$("#loginindown").hover(function(){ 
+    $(this).show();
+    $("#logininbox>a").addClass('on');
+}, function(){    
+    $(this).hide();
+    $("#logininbox>a").removeClass('on');
+});
+</script> 
+<script type="text/javascript" src="./assets/js/widget.js"></script>
+
+<div id="contactwidget">
+  <ul>
+    <li id="wgqq"> <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=123456789&amp;site=qq&amp;menu=yes">QQ</a>
+      <div id="wgqqbotline"></div>
+    </li>
+    <li id="wgwx"> <a href="javascript:;">微信</a>
+      <div class="wgbox"><img src="./assets/images/qrcode200.jpg" height="105" alt="极速微信"></div>
+    </li>
+    <li id="wgtop"><a href="javascript:;">TOP</a></li>
+  </ul>
+</div>
+
+<div id="foot" class="mtop15">
+  <div class="wid">
+    <div id="footleft"></div>
+    <div id="footcenter">
+      <div class="footitem">
+        <h3>首页</h3>
+        <ul>
+          <li><a href="">所有API</a></li>
+        </ul>
+      </div>
+      <div class="footitem">
+        <h3>关于</h3>
+        <ul>
+          <li><a href="" rel="nofollow">航盛聚合数据</a></li>
+          <li><a href="" rel="nofollow">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="footright">
+      <div class="footitem">
+        <h3>联系我们</h3>
+        <div id="telbox">
+          <div class="tel">0514-87569851</div>
+          <div>邮箱：juhe@yzhsae.com<br>
+            QQ ：236585114 23657414<br>
+            QQ群 ：96587452</div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <p class="clear">&#169; 2017 扬州航盛科技有限公司 版权所有 苏ICP备23423423号 </p>
+  </div>
+</div>
+
+
+
+
+
+<div class="registerMain" id="addapi">
+        <div class="regDiv">
+            <div class="xTitle">
+                <h4 class="emailTitle">申请服务</h4>
+                <a class="closeA" href="javascript:;">×</a>
+            </div>
+            <form action="" id="post_form" method="post" class="regForm" onsubmit="return false;" autocomplete="off">
+               
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="appname" id="appname" placeholder="APP名称" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+                
+                <div class="inputDiv">
+                    <input type="password" class="regInput" name="entryname" id="entryname" placeholder="项目名称" tabindex="3" autocomplete="off">
+                </div>
+                
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="client" id="client" placeholder="客户（整车厂）" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="projectmanager" id="projectmanager" placeholder="项目经理" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="appurl" id="appurl" placeholder="APP访问地址" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+              
+              <div class="forgetA" style="height: auto;">
+                	<p class="errorTips" style="display: none;"><i></i><em></em></p>
+                	<div class="sysError" style="display: none;"><i></i><em></em></div>
+                    
+                </div>
+                
+                <div class="inputDiv login-button-div">
+                    <input type="button" class="regBtn" id="postBtn" value="提交" style="letter-spacing: 3px;">
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.closeA').click(function(){
+                parent.window.layer.closeAll();
+            });
+
+            $("#appname").val('');
+            $("#entryname").val('');
+			$("#client").val('');
+			$("#projectmanager").val('');
+			$("#appurl").val('');
+
+		function isUrl(url){
+		   var urlreg = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?$/;
+		   if(!urlreg.test(url)) return false;
+		   return true;
+		 }
+
+            $("#postBtn").click(function(){
+				
+                $('.errorTips,.sysError').css('display','none');
+                
+                var appname = $("#appname").val();
+                var entryname = $("#entryname").val();
+                var client = $("#client").val();
+				var projectmanager = $("#projectmanager").val();
+				var appurl = $("#appurl").val();
+
+                if(appname.length < 1){
+                    showError('请输入APP名称!',$("#appname"));
+                }
+                else if(entryname.length <1){
+                    showError('请输入项目名称!',$("#entryname"));
+                }
+				else if(client.length <1){
+                    showError('请输入客户（整车厂）!',$("#client"));
+                }
+                else if(projectmanager.length <1){
+                    showError('请输入项目经理!',$("#client"));
+                } 
+                else
+                {
+					if(appurl.length >= 1 ){
+					   if (!isUrl(appurl)) {
+						showError('请输入正确的APP访问地址!',$("#appurl"));
+					   }else{
+						   postadd();
+					   }
+					}else{
+						postadd();
+					}
+					
+					
+                }
+
+            });
+
+		function postadd(){
+				$("#postBtn").val('提交中...').attr("disabled", 'disabled');
+			
+			 
+                    $("#login_form").ajaxSubmit(function(e){
+                        var obj  = json_parse(e);
+                        var code = obj.code;
+                        if(code == '1')
+                        {   //提交成功
+                            parent.window.layer.closeAll();
+							layer.msg(obj.info,{icon:1,time:'1500',shade:0.3,shadeClose:true});
+                        }else
+                        {
+                            $("#loginBtn").val('提交').removeAttr('disabled');
+                            return false;
+                        }
+                    });
+		}
+
+        //错误显示
+        function showError(msg,selector)
+        {
+            $('.forgetA').find('.errorTips').find('em').html(msg)
+            $('.forgetA').find('.errorTips').fadeIn();
+            $("#loginBtn").val('提交').removeAttr('disabled');
+        }
+		});
+    </script>
+    
+    
+<script>
+function applybtn(e){
+
+layer.open({
+		type: 1,
+		shadeClose: false,
+		title: false,
+		closeBtn: 0,
+		shade: [0.65, '#000'],
+		border: [1, 0.5, '#ccc'],
+		area: ['400px', '500px'],
+		content: $('#addapi') 
+	})
+}
+
+
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>航盛聚合数据-重置密码</title>
+<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/register.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/regMember.css">
+<link rel="stylesheet" href="./assets/css/layer.css" id="layui_layer_skinlayercss" style="">
+</head>
+
+<body>
+<canvas id="regId"></canvas>
+<div id="regHeader"> <a href="" target="_blank">
+  <div class="juhe_logo"></div>
+  </a>
+  <div class="juhe_login"> 已有航盛聚合帐号，<a href="login.html" target="_blank">直接登录</a><img src="./assets/images/arrow.png"> </div>
+</div>
+<div id="regContent">
+  <div class="reg_content forget" style="top: 230.5px; left: 510px; display: block;">
+  
+    <form id="resetPwdForm" action="https://www.juhe.cn/forget/resetPwdDo" method="post" class="forgetForm" autocomplete="off" onsubmit="return false;" style="display: block;">
+      <div class="reg_desc">
+        <div class="reg_desc_big mail">重置密码</div>
+      </div>
+      <div class="reg_input">
+                <div class="reg_input_para">
+                    <div class="reg_border hover"></div>
+                    <input type="password" class="regInput" name="password" value="" id="password" placeholder="新密码（不少于6位）" autocomplete="off" tabindex="1">
+                    <span class="errorTips"><i class="iconfont"></i><em>请输入大于6位的密码</em></span>
+                </div>
+                <div class="reg_input_para">
+                    <div class="reg_border"></div>
+                    <input type="password" class="regInput" name="password2" value="" id="password2" placeholder="再次输入密码" autocomplete="off" tabindex="2">
+                    <span class="errorTips"><i class="iconfont"></i><em>两次输入的密码不一致，请重新输入</em></span>
+                </div>
+                <div class="reg_input_para">
+                    <input type="button" class="regBtn" id="resetBtn" value="重置密码">
+                    <span class="errorTips"><i class="iconfont"></i><em>系统异常</em></span>
+                </div>
+            </div>
+    </form>
+  </div>
+</div>
+<div id="regCircle"></div>
+<script src="./assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/layer/layer.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/json.parse.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/regPublic.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/regAnimation.js" type="text/javascript" charset="utf-8"></script> 
+<script type="text/javascript">
+    var window_width = $(window).width();
+    var window_height = $(window).height();
+
+    function regAnimation() {
+
+        var $ele = $('#regId');
+
+        if ($ele[0].getContext) {
+            $('#regId').regAnimation({
+                window_width: window_width,
+                window_height: window_height,
+                window_background: '#fff',
+                star_count: '100',
+                star_color: '#02c5ff',
+                star_depth: '600'
+            });
+        }
+    }
+
+	
+    $(function() {
+        $('#regCircle').height(window_height - 330).fadeIn(function() {
+            regAnimation();
+        });
+    });
+</script> 
+
+
+<script type="text/javascript">
+        function init() {
+            initEvent();
+        }
+
+        function initDom() {
+            var top = ($(window).height() - 180) / 2 - 120;
+            var left = ($(window).width() - 900) / 2;
+            $('.reg_content').css({
+                'top': top,
+                'left': left
+            }).fadeIn(initDo);
+        }
+
+        function initDo() {
+            $('.reg_content .reg_border:eq(0)').addClass('hover');
+        }
+
+        function initEvent() {
+
+            $('.reg_content').on('focus', '.regInput', function() {
+                $('.reg_border').removeClass('hover');
+                $(this).closest('.reg_input_para').find('.reg_border').addClass('hover');
+            });
+
+            $(window).on('resize', initDom);
+            $(document).on('ready', initDom);
+
+            $('#password').on('blur', function() {
+
+                var ele = $(this);
+                var errorDom = ele.siblings('.errorTips');
+                var password = $.trim(ele.val());
+
+                if (password.length < 6) {
+                    showError('请输入正确的密码', $('#password'));
+                } else {
+                    errorDom.find('em').html('');
+                    errorDom.hide();
+                }
+            });
+
+            $('#password2').on('blur', function() {
+
+                var ele = $(this);
+                var errorDom = ele.siblings('.errorTips');
+                var password = $.trim($('#password').val());
+                var password2 = $.trim(ele.val());
+
+                if (password !== password2) {
+                    showError('两次输入的密码不一致，请重新输入', $('#password2'));
+                } else {
+                    errorDom.find('em').html('');
+                    errorDom.hide();
+                }
+
+            });
+
+            $('#resetBtn').click(function() {
+
+                var password = $('#password').val();
+                var password2 = $('#password2').val();
+
+                password = $.trim(password);
+                password2 = $.trim(password2);
+
+                $(this).val('重置中...').prop('disabled', true);
+                $('.errorTips').find('em').html('');
+                $('.errorTips').hide();
+
+                if (password.length < 6) {
+                    showError('请输入正确的密码', $('#password'), true);
+                } else if (password !== password2) {
+                    showError('两次输入的密码不一致，请重新输入', $('#password2'), true);
+                } else { //基础验证通过
+                    $('#resetPwdForm').ajaxSubmit(function(e) {
+                        var obj = json_parse(e);
+                        var code = obj.code;
+                        var info = obj.info;
+
+                        if (code == '1') {
+							//修改成功提示
+                            layer.msg(info,{icon:1,time:'1500'});
+                            setTimeout(function(){window.location.href = obj.acturl;},1500);
+                        } else {
+                            if (code == '-2' || code == '-3') {
+                                showError(info, $('#password2'), true);
+                            } else if (code == '-100') {
+                                showError(info, $('#resetPwdForm'), true);
+                            } else if (code == '-1') {
+                                showError(info, $('#password'), true);
+                            }
+                            $('#resetPwdForm').val('重置密码').prop('disabled', false);
+                        }
+                    })
+                }
+            });
+        }
+
+        function showError(msg, selector, isFocus) {
+            selector.parent().find('.errorTips').find('em').html(msg)
+            selector.parent().find('.errorTips').fadeIn();
+            $('.regBtn').val('重置密码').prop('disabled', false);
+
+            if(isFocus){
+                selector.focus();
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>

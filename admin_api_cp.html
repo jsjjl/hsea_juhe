@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://112.74.198.42/cp/userinfo/myApp -->
+<html class="js cssanimations"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>开始使用 | cp API</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="http://112.74.198.42/cp/resources/css/amazeui.min.css">
+    <link rel="stylesheet" href="http://112.74.198.42/cp/resources/css/amaze.min.css">
+    <link rel="stylesheet" href="http://112.74.198.42/cp/resources/css/serviceinfo.css">
+    <script src="./assets/js/echarts.min.js"></script>
+    <script src="./assets/js/walden.js"></script>
+    <link rel="stylesheet" href="./assets/css/user_new.css">
+    <style>
+	@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(./assets/images/fontawesome-webfont.woff2?v=4.3.0) format('woff2');font-weight:400;font-style:normal}
+	</style>
+</head>
+
+<body class="new" data-amui="2.x">
+    <div class="top-nav">
+        <div class="am-g-fixed am-g">
+           
+           <a href="index.html" class="centerLogo am-fl" target="_blank" ><img  src="./assets/images/loginlogo.png" alt="航盛聚合数据"></a>
+            <ul class="am-fr">
+                <li class="login" style="display: none;">
+                    <span>请登录，</span><span><a href="http://112.74.198.42/cp/userinfo/login">登录</a></span><span>|</span><span><a href="http://112.74.198.42/cp/userinfo/register">注册</a></span>
+                </li>
+                <li class="logout">
+                    <span>欢迎您，</span><span><a href="http://112.74.198.42/cp/userinfo/myApp" id="userName">jiangjinlei</a></span><span>|</span><span><a href="http://112.74.198.42/cp/userinfo/logout">注消</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>   
+    
+    <section class="dashboard" id="amz-main">
+        <div class="am-g am-g-fixed">
+            
+    <div class="col-md-2 am-u-md-2 left-menu">
+        <ul class="am-nav" id="userCenterNav">
+            <li class="">
+                <a href="user.html"><i class="am-icon-cubes"></i>我的应用</a>
+            </li>
+            
+             <li class=" am-panel">
+				<a data-am-collapse="{parent: '#collapase-nav-2', target: '#user-nav2'}">
+					<i class="am-icon-user"></i>个人中心<i class="am-icon-angle-right am-fr am-margin-right"></i>
+				</a>
+				<ul class="am-list am-collapse " id="user-nav2">
+						<li ><a href="user_msg.html" class="">修改密码</a></li>
+				</ul>
+			  </li>
+           
+            <li class="">
+                <a href="admin_examine.html"><i class="am-icon-edit"></i>申请服务审核</a>
+            </li>
+            <li class="">
+                <a href="admin_user.html"><i class="am-icon-group"></i>开发者信息</a>
+            </li>
+            <li class="active">
+                <a href="admin_api.html"><i class="am-icon-cube"></i>聚合数据管理</a>
+            </li>
+            <li class="">
+                <a href="admin_count.html"><i class="am-icon-area-chart"></i>使用统计</a>
+            </li>
+            <li class="">
+                <a href="admin_tag.html"><i class="am-icon-list-ul"></i>类别管理</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    <div class="col-md-10 am-u-md-10 doc-content" id="myAppData">
+    <h1>服务信息 <a href="admin_api.html" class="am-btn am-btn-default am-btn-xs am-fr am-margin-top-0" >返回</a></h1>
+    <table class="am-table am-table-striped am-table-hover am-table-bordered" id="myAppTableData">
+        <thead>
+            <tr>
+                <th>服务实现名称</th>
+                <th>网站名称</th>
+                <th>账号</th>
+                <th>密码</th>
+                <th>KEY</th>
+                <th>服务实现标识符SN</th>
+                <th>服务实现接口状态</th>
+                <th>是否免费</th>
+                <th>优先级</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="appInfoName">中国天气网天气预报查询	</td>
+                <td>中国天气网</td>
+                <td>admin</td>
+                <td>admin123</td>
+                <td>123123123</td>
+                <td>weather_daily_forecast.china_weather</td>
+                <td><input type="checkbox" class="am-switch am-round am-switch-success n-am-switch" checked /></td>
+                <td><span class="am-badge am-badge-success am-text-sm">是</span></td>
+                <td><input class="priority" type="text" value="1" style="width:50px;text-align:center;"></td>
+            </tr>
+            <tr class="off">
+                <td class="appInfoName">中国天气网天气预报查询	</td>
+                 <td>中国天气网</td>
+                <td>admin</td>
+                <td>admin123</td>
+                <td>123123123</td>
+                <td>weather_daily_forecast.china_weather</td>
+                <td><input type="checkbox" class="am-switch am-round am-switch-success n-am-switch"  /></td>
+                <td><span class="am-badge am-badge-warning  am-text-sm">否</span</td>
+                <td><input class="priority" type="text" value="2" style="width:50px;text-align:center;"></td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+
+  <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+    <h1>服务调用统计</h1>
+    
+    			<form class="am-form am-form-inline cp-am-form">
+                    <div class="am-form-group am-form-group-sm">
+                        <label for="doc-ipt-3-1" class="am-u-sm-4 am-form-label align-right">起始时间</label>
+                        <div class="am-u-sm-8">
+                            <input type="text" class="am-form-field" id="beginTime" placeholder="选择时间" data-am-datepicker="" readonly>
+                        </div>
+                    </div>
+                    <div class="am-form-group am-form-group-sm">
+                        <label for="doc-ipt-3-1" class="am-u-sm-4 am-form-label align-right">截止时间</label>
+                        <div class="am-u-sm-8">
+                            <input type="text" class="am-form-field" id="endTime" placeholder="选择时间" data-am-datepicker="" readonly>
+                        </div>
+                    </div>
+                    <button type="button" class="am-btn am-btn-secondary am-btn-sm" id="serviceImpleBtn">查询</button>
+                    <input type="hidden" id="serviceInfoSn" value="weather_air_quality">
+                </form>
+                
+                  
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width:100%;height:350px; margin: 30px auto 0;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'), 'walden');
+
+        // 指定图表的配置项和数据
+        var option = {
+    title : {
+        text: '访问情况统计',
+        subtext: '空气质量服务',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ['和风天气网空气质量查询','心知天气网空气质量查询','PM25IN空气质量查询']
+    },
+    series : [
+        {
+            name: '调用来源',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'和风天气网空气质量查询'},
+                {value:310, name:'心知天气网空气质量查询'},
+                {value:234, name:'PM25IN空气质量查询'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    
+                
+                
+</div>
+   
+           </div>
+    </section>
+    
+ 
+   
+    <footer class="amz-footer">
+        <div class="am-g am-g-fixed">
+            <div class="col-md-4 col-md-push-8 am-u-md-4 am-u-md-push-8">
+                <ul class="amz-social">
+                    <li>
+                        <a href="javascript: void(0)" target="_blank" title="CP API 用户交流群">
+                            <span class="am-icon-qq"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://112.74.198.42/cp/userinfo/myApp#" target="_blank" title="Amaze UI 微博">
+                            <span class="am-icon-weibo"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-am-modal="" href="http://112.74.198.42/cp/userinfo/myApp#am-wechat" title="微信">
+                            <span class="am-icon-wechat"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4">
+                <ul class="amz-links">
+                    <li>
+                        <a href="http://112.74.198.42/cp/userinfo/myApp#">联系我们</a> |
+                        <a href="http://112.74.198.42/cp/userinfo/myApp#">品牌相关</a>
+                    </li>
+                </ul>
+                <p class="amz-cp">
+                    © 2015 TSP, Inc. Licensed under
+                    <a href="http://112.74.198.42/cp/userinfo/myApp#" target="_blank">
+                            TSP
+                        </a> . Developed with
+                    <a href="http://112.74.198.42/cp/userinfo/myApp#" target="_blank">
+                            TSP
+                        </a> .
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="am-modal am-modal-no-btn" id="am-wechat" tabindex="-1">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">
+                <a class="am-close am-close-spin" data-am-modal-close="" href="http://112.74.198.42/cp/userinfo/myApp">
+                        ×
+                    </a>
+            </div>
+            <div class="am-modal-bd">
+                <img alt="CP API 微信" src="http://112.74.198.42/cp/userinfo/myApp">
+                <br> 在微信上关注我们
+            </div>
+        </div>
+    </div>
+    <div class="amz-toolbar" id="amz-toolbar" style="right: 396.5px;">
+        <a class="am-icon-btn am-icon-arrow-up am-active" href="#top" id="amz-go-top" title="回到顶部"></a>
+    </div>
+
+    <div class="am-modal am-modal-alert" id="my-alert" tabindex="-1">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Amaze UI</div>
+            <div class="am-modal-bd">
+                Hello world！
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn">确定</span>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="webRoot" name="webRoot" value="/cp">
+<!--[if lte IE 9 ]>
+    <div class="am-alert am-alert-danger ie-warning" data-am-alert>
+        <button type="button" class="am-close">
+            &times;
+        </button>
+        <div class="am-container">
+            提醒：你的浏览器太古董了，妹子无爱，
+            <a href="" target="_blank">
+                还不速速换一个
+            </a>
+            ！
+        </div>
+    </div>
+<![endif]-->    <script src="http://112.74.198.42/cp/resources/js/plugins/jquery.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/amazeui.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/main.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/moment.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/common/common.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/common/active.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/common/login_logout.js"></script>    
+    <script src="http://112.74.198.42/cp/resources/js/usercenter/common.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/usercenter/myapp.js"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/js/am-switch-master/dist/amazeui.switch.css">
+    <script type="text/javascript" src="./assets/js/am-switch-master/dist/amazeui.switch.js"></script>
+    
+            
+
+
+<script>
+$(function() {
+	
+	
+	$(".n-am-switch").click(function(){
+				if($(this).children().children().prop("checked")) {
+					$(this).parent().parent().addClass("off");
+				}else{
+					$(this).parent().parent().removeClass("off");
+				}
+			});
+	
+	
+  $('#doc-modal-list').find('.am-icon-close').add('.doc-confirm-toggle').
+    on('click', function() {
+      $('#my-confirm').modal({
+        relatedTarget: this,
+        onConfirm: function(options) {
+          var $link = $(this.relatedTarget).prev('a');
+         
+          
+        },
+        // closeOnConfirm: false,
+        onCancel: function() {
+          
+        }
+      });
+    });
+});	
+</script>
+
+
+
+
+
+</body></html>

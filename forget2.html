@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>航盛聚合数据-找回密码</title>
+<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/register.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/regMember.css">
+<link rel="stylesheet" href="./assets/css/layer.css" id="layui_layer_skinlayercss" style="">
+</head>
+
+<body>
+<canvas id="regId"></canvas>
+<div id="regHeader"> <a href="" target="_blank">
+  <div class="juhe_logo"></div>
+  </a>
+  <div class="juhe_login"> 已有航盛聚合帐号，<a href="login.html" target="_blank">直接登录</a><img src="./assets/images/arrow.png"> </div>
+</div>
+<div id="regContent">
+  <div class="reg_content forget" style="top: 230.5px; left: 510px; display: block;">
+  
+    <form name="forgetForm" id="mailForm" action="https://www.juhe.cn/forget/sendEmail" method="post" class="forgetForm" autocomplete="off" onsubmit="return false;" style="display: block;">
+      <div class="reg_desc">
+        <div class="reg_desc_big mail">找回密码</div>
+      </div>
+      <div class="reg_input">
+            <div class="reg_input_para">
+                <p class="success_title">密码重置邮件已发送至你的邮箱：<span>135652820@qq.com</span></p>
+                <p class="success_desc">请登录你的邮箱，点击链接可完成密码重置</p>
+                <p>
+                                    <a href="http://mail.qq.com" target="_blank"><input type="button" class="regBtn" id="mailRegBtn" value="登录邮箱重置密码"></a>
+                                </p>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>
+<div id="regCircle"></div>
+<script src="./assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/layer/layer.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/json.parse.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/regPublic.js" type="text/javascript" charset="utf-8"></script> 
+<script src="./assets/js/regAnimation.js" type="text/javascript" charset="utf-8"></script> 
+<script type="text/javascript">
+    var window_width = $(window).width();
+    var window_height = $(window).height();
+
+    function regAnimation() {
+
+        var $ele = $('#regId');
+
+        if ($ele[0].getContext) {
+            $('#regId').regAnimation({
+                window_width: window_width,
+                window_height: window_height,
+                window_background: '#fff',
+                star_count: '100',
+                star_color: '#02c5ff',
+                star_depth: '600'
+            });
+        }
+    }
+
+	
+    $(function() {
+        $('#regCircle').height(window_height - 330).fadeIn(function() {
+            regAnimation();
+        });
+    });
+</script> 
+
+
+<script type="text/javascript">
+        function init() {
+            initEvent();
+        }
+
+        function initDom() {
+            var top = ($(window).height() - 130) / 2 - 120;
+            var left = ($(window).width() - 900) / 2;
+            $('.reg_content').css({
+                "top": top,
+                "left": left
+            }).fadeIn();
+        }
+
+        function initEvent() {
+
+            $(window).on('resize', initDom);
+            $(document).on('ready', initDom);
+        }
+
+        init();
+    </script>
+</body>
+</html>

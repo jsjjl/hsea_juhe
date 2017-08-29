@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>航盛聚合数据</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="./assets/css/mainv2.css" rel="stylesheet" type="text/css">
+<script src="./assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body >
+<div id="top">
+	<div class="wid">
+		<div id="logo"><a href="index.html">航盛聚合数据</a></div>
+        <div id="logocenter">
+          <div id="nav">
+          <ul>
+			<li><a href="" class="on">API</a></li>
+		  </ul>
+          </div>
+        </div>
+		<div id="logoright">
+          <div id="searchbox">
+          <form action="">
+            <input id="keyword" type="text" name="keyword" placeholder="请输入API名称，如：天气" value=""><input type="submit" id="searchbtn" value="搜索">
+          </form>
+          </div> 
+          <div id="logindiv">
+                        <div id="nologinbox">
+              <a href="login.html" class="on" rel="nofollow">登录</a><span>|</span><a href="register.html" rel="nofollow">注册</a></div>
+                      </div>			  			
+		</div>
+		<div class="clear"></div>
+	</div> 
+</div>
+<div class="wid" id="apilbox">
+  <div id="apileft">
+    <h2>API大全</h2>
+    <ul>
+      <li><a href="" id="iclass1">生活常用 <span>0</span></a></li>
+      <li><a href="" id="iclass3">天气服务 <span>4</span></a></li>
+      <li><a href="" id="iclass2">交通出行 <span>0</span></a></li>
+      <li><a href="" id="iclass12">图像识别 <span>0</span></a></li>
+      <li><a href="" id="iclass9">充值缴费 <span>0</span></a></li>
+      <li><a href="" id="iclass10">位置服务 <span>0</span></a></li>
+      <li><a href="" id="iclass11">新闻媒体 <span>0</span></a></li>
+    </ul>
+  </div>
+  <div id="apiright">
+    <div id="apirtitle">
+      <h1>全部API<span>4个</span></h1>
+      <div class="clearfix"></div>
+    </div>
+    <div id="apilistbox" class="hotdata">
+      <ul>
+       
+<!--
+        <li style="border-top-color:#ff7457"><a href=""> <img src="./assets/images/illegal.png" height="70" alt="全国交通违章查询">
+          <h3>全国交通违章查询</h3>
+          <span><i><del>￥</del>350</i>/10000次</span>
+          <div class="apinum"> <span class="clicknum"><i></i>72754</span><span class="usenum"><i></i>14802</span> </div>
+          </a></li>
+-->
+          
+        <li class="" style="border-top-color:#ff9959"><a href="api.html">
+          <div class="apitag apifree"></div>
+          <div class="apicom">官方</div>
+          <img src="./assets/images/iqa1.png" height="70" alt="天气指数服务">
+          <h3>天气指数服务</h3>
+          <span><i class="nocalprice">免费</i></span>
+          <div class="apinum"> <span class="clicknum"><i></i>26938</span><span class="usenum"><i></i>5101</span> </div>
+          </a></li>
+          
+          <li class="" style="border-top-color:#4fcee1"><a href="api.html">
+          <div class="apitag apifree"></div>
+          <div class="apicom">官方</div>
+          <img src="./assets/images/iqa2.png" height="70" alt="天气预报服务">
+          <h3>天气预报服务</h3>
+          <span><i class="nocalprice">免费</i></span>
+          <div class="apinum"> <span class="clicknum"><i></i>26938</span><span class="usenum"><i></i>5101</span> </div>
+          </a></li>
+          
+          <li class="" style="border-top-color:#89ed53"><a href="api.html">
+          <div class="apitag apifree"></div>
+          <div class="apicom">官方</div>
+          <img src="./assets/images/iqa3.png" height="70" alt="空气质量服务">
+          <h3>空气质量服务</h3>
+          <span><i class="nocalprice">免费</i></span>
+          <div class="apinum"> <span class="clicknum"><i></i>26938</span><span class="usenum"><i></i>5101</span> </div>
+          </a></li>
+          
+          <li class="" style="border-top-color:#ff5c59"><a href="api.html">
+          <div class="apitag apifree"></div>
+          <div class="apicom">官方</div>
+          <img src="./assets/images/iqa.png" height="70" alt="实时天气服务">
+          <h3>实时天气服务</h3>
+          <span><i class="nocalprice">免费</i></span>
+          <div class="apinum"> <span class="clicknum"><i></i>26938</span><span class="usenum"><i></i>5101</span> </div>
+          </a></li>
+          
+          
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="mtop10" id="pageline"> <span class="pprev">上一页</span> <span class="current">1</span> <a href="">2</a> <a href="">3</a> <a href="">4</a> <a href="">5</a> <a href="">6</a> <a href="" class="pnext">下一页</a> </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<script type="text/javascript">
+$("#logininbox>a").hover(function(){ 
+    $('#loginindown').show();
+}, function(){    
+    $('#loginindown').hide();
+});
+
+$("#loginindown").hover(function(){ 
+    $(this).show();
+    $("#logininbox>a").addClass('on');
+}, function(){    
+    $(this).hide();
+    $("#logininbox>a").removeClass('on');
+});
+</script> 
+<script type="text/javascript" src="./assets/js/widget.js"></script>
+<div id="contactwidget">
+  <ul>
+    <li id="wgqq"> <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=123456789&amp;site=qq&amp;menu=yes">QQ</a>
+      <div id="wgqqbotline"></div>
+    </li>
+    <li id="wgwx"> <a href="javascript:;">微信</a>
+      <div class="wgbox"><img src="./assets/images/qrcode200.jpg" height="105" alt="极速微信"></div>
+    </li>
+    <li id="wgtop"><a href="javascript:;">TOP</a></li>
+  </ul>
+</div>
+<div id="foot" class="mtop15">
+  <div class="wid">
+    <div id="footleft"></div>
+    <div id="footcenter">
+      <div class="footitem">
+        <h3>首页</h3>
+        <ul>
+          <li><a href="">所有API</a></li>
+        </ul>
+      </div>
+      <div class="footitem">
+        <h3>关于</h3>
+        <ul>
+          <li><a href="" rel="nofollow">航盛聚合数据</a></li>
+          <li><a href="" rel="nofollow">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="footright">
+      <div class="footitem">
+        <h3>联系我们</h3>
+        <div id="telbox">
+          <div class="tel">0514-87569851</div>
+          <div>邮箱：juhe@yzhsae.com<br>
+            QQ ：236585114 23657414<br>
+            QQ群 ：96587452</div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <p class="clear">&#169; 2017 扬州航盛科技有限公司 版权所有 苏ICP备23423423号 </p>
+  </div>
+</div>
+</body>
+</html>

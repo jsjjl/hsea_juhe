@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://112.74.198.42/cp/userinfo/myApp -->
+<html class="js cssanimations"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>开始使用 | cp API</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="http://112.74.198.42/cp/resources/css/amazeui.min.css">
+    <link rel="stylesheet" href="http://112.74.198.42/cp/resources/css/amaze.min.css">
+    <link rel="stylesheet" href="http://112.74.198.42/cp/resources/css/serviceinfo.css">
+    <link rel="stylesheet" href="./assets/css/user_new.css">
+    <style>
+	@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(./assets/images/fontawesome-webfont.woff2?v=4.3.0) format('woff2');font-weight:400;font-style:normal}
+	</style>
+</head>
+
+<body class="new" data-amui="2.x">
+    <div class="top-nav">
+        <div class="am-g-fixed am-g">
+           
+           <a href="index.html" class="centerLogo am-fl" target="_blank" ><img  src="./assets/images/loginlogo.png" alt="航盛聚合数据"></a>
+            <ul class="am-fr">
+                <li class="login" style="display: none;">
+                    <span>请登录，</span><span><a href="http://112.74.198.42/cp/userinfo/login">登录</a></span><span>|</span><span><a href="http://112.74.198.42/cp/userinfo/register">注册</a></span>
+                </li>
+                <li class="logout">
+                    <span>欢迎您，</span><span><a href="http://112.74.198.42/cp/userinfo/myApp" id="userName">jiangjinlei</a></span><span>|</span><span><a href="http://112.74.198.42/cp/userinfo/logout">注消</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>   
+    
+    <section class="dashboard" id="amz-main">
+        <div class="am-g am-g-fixed">
+            
+    <div class="col-md-2 am-u-md-2 left-menu">
+       
+       
+
+       
+  
+       
+       
+        	<ul class="am-nav " id="userCenterNav">
+            <li >
+                <a href="user.html"><i class="am-icon-cubes"></i>我的应用</a>
+            </li>
+            
+            
+            
+			  <li class="active am-panel">
+				<a data-am-collapse="{parent: '#collapase-nav-2', target: '#user-nav2'}">
+					<i class="am-icon-user"></i>个人中心<i class="am-icon-angle-right am-fr am-margin-right"></i>
+				</a>
+				<ul class="am-list am-collapse " id="user-nav2">
+						<li ><a href="user_msg.html" class="active">修改密码</a></li>
+				</ul>
+			  </li>
+            
+            
+
+            <li class="">
+                <a href="admin_examine.html"><i class="am-icon-edit"></i>申请服务审核</a>
+            </li>
+            <li class="">
+                <a href="admin_user.html"><i class="am-icon-group"></i>开发者信息</a>
+            </li>
+            <li class="">
+                <a href="admin_api.html"><i class="am-icon-cube"></i>聚合数据管理</a>
+            </li>
+            <li class="">
+                <a href="admin_count.html"><i class="am-icon-area-chart"></i>使用统计</a>
+            </li>
+            <li class="">
+                <a href="admin_tag.html"><i class="am-icon-list-ul"></i>类别管理</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    <div class="col-md-10 am-u-md-10 doc-content" id="myAppData">
+    <h1>修改密码</h1>
+    <div class=" am-u-md-5">
+                   <form action="" class="am-form" data-am-validator>
+  
+    <div class="am-form-group">
+      <label for="doc-vld-name-2">旧密码：</label>
+      <input type="text" id="doc-vld-name-2" minlength="6"
+             placeholder="请输入旧密码" required/>
+    </div>
+
+    <div class="am-form-group">
+      <label for="doc-vld-pwd-1">新密码：</label>
+      <input type="password" id="doc-vld-pwd-1" placeholder="请输入新密码"  minlength="6" required/>
+    </div>
+
+    <div class="am-form-group">
+      <label for="doc-vld-pwd-2">确认密码：</label>
+      <input type="password" id="doc-vld-pwd-2" placeholder="请与上面输入的值一致" data-equal-to="#doc-vld-pwd-1" required/>
+    </div>
+
+    <button class="am-btn am-btn-secondary" type="submit">提交</button>
+
+</form>
+                </div>
+</div>
+   
+           </div>
+    </section>
+    
+    
+    
+    <div class="amz-toolbar" id="amz-toolbar" style="right: 396.5px;">
+        <a class="am-icon-btn am-icon-arrow-up am-active" href="http://112.74.198.42/cp/userinfo/myApp#top" id="amz-go-top" title="回到顶部"></a>
+    </div>
+
+    
+    
+<!--[if lte IE 9 ]>
+    <div class="am-alert am-alert-danger ie-warning" data-am-alert>
+        <button type="button" class="am-close">
+            &times;
+        </button>
+        <div class="am-container">
+            提醒：你的浏览器太古董了，妹子无爱，
+            <a href="" target="_blank">
+                还不速速换一个
+            </a>
+            ！
+        </div>
+    </div>
+<![endif]-->
+	<script src="http://112.74.198.42/cp/resources/js/plugins/jquery.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/amazeui.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/main.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/moment.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/plugins/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/common/common.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/common/active.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/common/login_logout.js"></script>    
+    <script src="http://112.74.198.42/cp/resources/js/usercenter/common.js"></script>
+    <script src="http://112.74.198.42/cp/resources/js/usercenter/myapp.js"></script>    
+
+</body></html>

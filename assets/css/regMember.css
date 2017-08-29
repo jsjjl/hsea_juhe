@@ -1,0 +1,453 @@
+/***
+commom
+***/
+
+.sprite {
+    background-image: url(../images/imgnew/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-reg_arrow {
+    width: 8px;
+    height: 8px;
+    background-position: -5px -5px;
+}
+
+.sprite-reg_bottom {
+    width: 236px;
+    height: 46px;
+    background-position: -23px -5px;
+}
+
+.sprite-reg_flower_1 {
+    width: 31px;
+    height: 28px;
+    background-position: -269px -5px;
+}
+
+.sprite-reg_flower_2 {
+    width: 21px;
+    height: 19px;
+    background-position: -269px -43px;
+}
+
+.sprite-reg_flower_3 {
+    width: 32px;
+    height: 29px;
+    background-position: -5px -72px;
+}
+
+.sprite-reg_n_l {
+    width: 24px;
+    height: 12px;
+    background-position: -47px -72px;
+    position: relative;
+    top: -6px;
+    left: 10px;
+}
+
+.sprite-reg_n_r {
+    width: 24px;
+    height: 12px;
+    background-position: -81px -72px;
+    position: relative;
+    top: -6px;
+    left: -10px;
+}
+
+.sprite-reg_people_1 {
+    width: 129px;
+    height: 252px;
+    background-position: -310px -5px;
+}
+
+.sprite-reg_people_2 {
+    width: 88px;
+    height: 194px;
+    background-position: -5px -267px;
+}
+
+.sprite-reg_people_3 {
+    width: 89px;
+    height: 197px;
+    background-position: -103px -267px;
+}
+
+.sprite-reg_s_l {
+    width: 6px;
+    height: 13px;
+    background-position: -202px -267px;
+    position: relative;
+    top: -6px;
+    left: 4px;
+}
+
+.sprite-reg_s_r {
+    width: 6px;
+    height: 13px;
+    background-position: -218px -267px;
+    left: -6px;
+    position: relative;
+    top: 8px;
+}
+
+.sprite-reg_star_1 {
+    width: 14px;
+    height: 14px;
+    background-position: -234px -267px;
+}
+
+.sprite-reg_star_2 {
+    width: 10px;
+    height: 10px;
+    background-position: -258px -267px;
+}
+
+.sprite-reg_star_3 {
+    width: 10px;
+    height: 10px;
+    background-position: -278px -267px;
+}
+
+.sprite-reg_star_4 {
+    width: 15px;
+    height: 15px;
+    background-position: -298px -267px;
+}
+
+
+/***
+mobileSuccessA.html & mobileSuccessB.html
+***/
+
+.success {
+    text-align: center;
+}
+
+.success .title {
+    margin-bottom: 56px;
+}
+
+.successa .title .big {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #00aeff;
+    margin-bottom: 10px;
+}
+
+.successa .title .small {
+    font-size: 20px;
+    color: #666;
+    letter-spacing: 1px;
+    position: relative;
+    left: -4px;
+}
+
+.successb .title .text {
+    font-size: 40px;
+    font-weight: lighter;
+    color: #666;
+}
+
+.success .title a {
+    color: #00aeff;
+    font-size: 12px;
+}
+
+.content {
+    width: 350px;
+    margin: auto;
+}
+
+.tab {
+    position: relative;
+    margin-bottom: 34px;
+}
+
+.tab .tab-border {
+    position: absolute;
+    height: 1px;
+    width: 350px;
+    background: #ddd;
+    bottom: 0;
+    z-index: 0;
+}
+
+.tab .tab_item {
+    display: inline-block;
+    font-size: 16px;
+    color: #999;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.tab .tab-first {
+    margin-right: 60px;
+}
+
+.tab .text {
+    height: 30px;
+}
+
+.tab .border {
+    height: 3px;
+    background: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.tab .tab_item.hover {
+    color: #00aeff;
+    font-weight: bold;
+}
+
+.tab .tab_item.hover .border {
+    background: #00aeff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.price-wrap {
+    overflow: hidden;
+    height: 66px;
+}
+
+.price {
+    position: relative;
+    left: 0;
+    width: 700px;
+}
+
+.price .price_item {
+    width: 98px;
+    margin-right: 19px;
+    border: 1px solid #bdbdbd;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    float: left;
+    padding: 2px;
+    cursor: pointer;
+    color: #666;
+}
+
+.price .price_item.last {
+    margin-right: 0;
+}
+
+.price .price_item.hover {
+    border: 3px solid #00aeff;
+    font-weight: bold;
+    color: #00aeff;
+    padding: 0;
+}
+
+.buy-btn {
+    margin: 40px 0 20px;
+    height: 40px;
+    line-height: 40px;
+    background: #00aeff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.buy-btn:hover {
+    opacity: 0.8;
+}
+
+.pass {
+    color: #999;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/***
+mobileSuccessA.html & mobileSuccessB.html
+***/
+
+.success-done {
+    text-align: center;
+}
+
+.success-done .title {
+    margin-bottom: 40px;
+}
+
+.success-done .title .big {
+    font-size: 36px;
+    font-weight: lighter;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.success-done .title .small {
+    font-size: 14px;
+    color: #999;
+}
+
+.success-done .title .small a {
+    color: #00aeff;
+}
+
+.success-done .title .small a:hover {
+    opacity: 0.8;
+}
+
+.success-done .content {
+    text-align: left;
+    height: 300px;
+    position: relative;
+    width: 324px;
+}
+
+.success-done .content .sprite {
+    position: absolute;
+}
+
+.success-done .bottom {
+    bottom: 0;
+    left: 40px;
+}
+
+@keyframes peopleOne {
+    0% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 30px;
+    }
+}
+
+@keyframes peopleTwo {
+    0% {
+        bottom: 40px;
+    }
+    100% {
+        bottom: 25px;
+    }
+}
+
+@keyframes peopleThree {
+    0% {
+        bottom: 37px;
+    }
+    100% {
+        bottom: 22px;
+    }
+}
+
+.success-done .people_1 {
+    bottom: 15px;
+    left: 90px;
+    z-index: 1;
+    /*animation: peopleOne 1s ease-in-out infinite alternate;*/
+}
+
+.success-done .people_2 {
+    bottom: 25px;
+    right: 56px;
+    /*animation: peopleTwo 1s ease-in-out infinite alternate;*/
+}
+
+.success-done .people_3 {
+    bottom: 22px;
+    left: 46px;
+    /*animation: peopleThree 1s ease-in-out infinite alternate;*/
+}
+
+.success-done .flower_1 {
+    right: 10px;
+    top: 166px;
+    animation-delay: 1s;
+}
+
+.success-done .flower_2 {
+    right: 76px;
+    top: 12px;
+    animation-delay: 2s;
+}
+
+.success-done .flower_3 {
+    left: 20px;
+    top: 36px;
+    animation-delay: 3s;
+}
+
+.success-done .star_1 {
+    left: 72px;
+    top: 16px;
+}
+
+.success-done .star_2 {
+    left: 0;
+    top: 106px;
+    animation-delay: 2s;
+}
+
+.success-done .star_3 {
+    right: 0;
+    top: 60px;
+    animation-delay: 3s;
+}
+
+.success-done .star_4 {
+    left: 26px;
+    top: 180px;
+    animation-delay: 1s;
+}
+
+.success-done .star_5 {
+    right: 80px;
+    top: 106px;
+}
+
+.success-done .star_6 {
+    left: 64px;
+    top: 60px;
+    animation-delay: 2s;
+}
+
+.success-done .star_7 {
+    right: 72px;
+    top: 58px;
+    animation-delay: 3s;
+}
+
+.success-done .star_8 {
+    left: 154px;
+    top: 66px;
+    animation-delay: 1s;
+}
+
+@keyframes scaleDraw {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.star {
+    animation: scaleDraw 3s ease-in-out infinite alternate;
+    opacity: 0;
+}

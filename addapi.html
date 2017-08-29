@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>申请服务</title>
+<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+<style type="text/css">
+html,body{overflow-x: hidden;}
+::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(3,197,255,0.5);
+}
+.regDiv a{color: #03c5ff;}
+.registerMain{ width: 400px; min-height:408px; overflow: auto; font-size: 14px; margin: 0 auto; border-top: 3px solid #03c5ff; border-bottom: none; border-radius: 2px;}
+.regForm{width: 300px; height:auto; padding: 0 50px 34px; overflow: hidden; color: #999; background: #fff; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
+.inputDiv{padding-top: 15px; position: relative;}
+.inputDiv .regInput{width: 260px; height: 28px; line-height: 28px; padding: 5px 19px; color: #606060; border: 1px solid #e7e7e7; border-radius: 2px; font-family: inherit;font-size: 14px;}
+.inputDiv .regInput:focus{border: 1px solid #b3b3b3;}
+.inputDiv.login-button-div{padding-top: 20px;}
+.regBtn{width: 100%; height: 40px; font-size: 14px; border: 0 none; background: #02c5ff; color: #fff; letter-spacing: 1px; border-radius: 2px;}
+.regBtn:hover{background: #04bff7;}
+.have{text-align: right; height: 20px; line-height: 20px; padding-top: 8px;}
+
+.regInput::-webkit-input-placeholder {
+    color:#bbb;
+}
+.regInput:-moz-placeholder {
+    color:#bbb;
+}
+.regInput::-moz-placeholder {
+    color:#bbb;
+}
+.regInput:-ms-input-placeholder {
+    color:#bbb;
+}
+.errorTips,.sysError{display: none; color: #fe514a; font-size: 12px;line-height: 20px; line-height: 10px; padding-top: 10px; text-align: left;}
+.errorTips i,.sysError i{padding: 0 9px;background: url(./assets/images/loginIcon.png) -32px -38px no-repeat;}
+.errorTips em,.sysError em{font-style: normal; }
+.getCode .regInput{width: 150px; z-index: 3; position: relative;}
+.getCode img{position: absolute; right: 30px; top:10px; height: 40px; border: 0; background: #f7f7f7; border-top-right-radius: 2px; border-bottom-right-radius: 2px; color: #909090;}
+.getCode .getImg{position: absolute; right: 5px; top: 20px; width: 19px; height: 21px; background: url(./assets/images/loginIcon.png) -2px -33px no-repeat;}
+.forgetA{height: auto; line-height: 32px; text-align: right; position: relative;}
+.xTitle{height: 56px; line-height: 56px; padding-top: 30px; position: relative; font-weight: normal;}
+.xTitle h4{color: #00aeff; font-size: 36px; font-weight: lighter; text-align: center;}
+.xTitle .closeA{position: absolute; right: 14px; top: 16px; width: 24px; height: 26px; color: #909090;font-size: 26px; line-height: 26px;text-align: center;}
+/*.sysError{color:#fe514a;font-size: 12px;height: 20px; line-height: 20px; position: relative; top:-5px;}*/
+#secondeCodeBnt{width:100px;line-height: 32px;color: #fff;background: #03c5ff;cursor: pointer;border: none;border-radius: 2px; position: absolute; right: 0; top:18px}
+</style>
+</head>
+<body>
+    <div class="registerMain">
+        <div class="regDiv">
+            <div class="xTitle">
+                <h4 class="emailTitle">申请服务</h4>
+                <a class="closeA" href="javascript:;">×</a>
+            </div>
+            <form action="" id="post_form" method="post" class="regForm" onsubmit="return false;" autocomplete="off">
+               
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="appname" id="appname" placeholder="APP名称" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+                
+                <div class="inputDiv">
+                    <input type="password" class="regInput" name="entryname" id="entryname" placeholder="项目名称" tabindex="3" autocomplete="off">
+                </div>
+                
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="client" id="client" placeholder="客户（整车厂）" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="projectmanager" id="projectmanager" placeholder="项目经理" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+                <div class="inputDiv">
+                    <input type="text" class="regInput" name="appurl" id="appurl" placeholder="APP访问地址" tabindex="2" autocomplete="off">
+                    
+                </div>
+                
+              
+              <div class="forgetA" style="height: auto;">
+                	<p class="errorTips" style="display: none;"><i></i><em></em></p>
+                	<div class="sysError" style="display: none;"><i></i><em></em></div>
+                    
+                </div>
+                
+                <div class="inputDiv login-button-div">
+                    <input type="button" class="regBtn" id="postBtn" value="提交" style="letter-spacing: 3px;">
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="./assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/js/json.parse.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/js/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+<script src="./assets/js/regPublic.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.closeA').click(function(){
+                parent.window.layer.closeAll();
+            });
+
+            $("#appname").val('');
+            $("#entryname").val('');
+			$("#client").val('');
+			$("#projectmanager").val('');
+			$("#appurl").val('');
+
+		function isUrl(url){
+		   var urlreg = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?$/;
+		   if(!urlreg.test(url)) return false;
+		   return true;
+		 }
+
+            $("#postBtn").click(function(){
+				
+                $('.errorTips,.sysError').css('display','none');
+                
+                var appname = $("#appname").val();
+                var entryname = $("#entryname").val();
+                var client = $("#client").val();
+				var projectmanager = $("#projectmanager").val();
+				var appurl = $("#appurl").val();
+
+                if(appname.length < 1){
+                    showError('请输入APP名称!',$("#appname"));
+                }
+                else if(entryname.length <1){
+                    showError('请输入项目名称!',$("#entryname"));
+                }
+				else if(client.length <1){
+                    showError('请输入客户（整车厂）!',$("#client"));
+                }
+                else if(projectmanager.length <1){
+                    showError('请输入项目经理!',$("#client"));
+                } 
+                else
+                {
+					if(appurl.length >= 1 ){
+					   if (!isUrl(appurl)) {
+						showError('请输入正确的APP访问地址!',$("#appurl"));
+					   }else{
+						   postadd();
+					   }
+					}else{
+						postadd();
+					}
+					
+					
+                }
+
+            });
+
+		function postadd(){
+				$("#postBtn").val('提交中...').attr("disabled", 'disabled');
+			
+			 
+                    $("#login_form").ajaxSubmit(function(e){
+                        var obj  = json_parse(e);
+                        var code = obj.code;
+                        if(code == '1')
+                        {   //提交成功
+                            parent.window.layer.closeAll();
+							layer.msg(obj.info,{icon:1,time:'1500',shade:0.3,shadeClose:true});
+                        }else
+                        {
+                            $("#loginBtn").val('提交').removeAttr('disabled');
+                            return false;
+                        }
+                    });
+		}
+
+        //错误显示
+        function showError(msg,selector)
+        {
+            $('.forgetA').find('.errorTips').find('em').html(msg)
+            $('.forgetA').find('.errorTips').fadeIn();
+            $("#loginBtn").val('提交').removeAttr('disabled');
+        }
+		});
+    </script>
+
+
+</body></html>
